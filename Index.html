@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Several Deaths — NJ</title>
+    <style>
+        /* -----------------------------------------
+           OFFLINE FONT LOADING (.woff)
+           ----------------------------------------- */
+        @font-face {
+            font-family: 'Sofia Pro';
+            src: url('fonts/SofiaPro-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Sofia Pro';
+            src: url('fonts/SofiaPro-Light.woff') format('woff');
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        /* -----------------------------------------
+           LAYOUT & TYPOGRAPHY STYLING
+           ----------------------------------------- */
+        * { box-sizing: border-box; }
+        
+        body {
+            background-image: url('bg.png');
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+            background-color: #f7f5f0; 
+            
+            color: #2c2a29; 
+            font-family: 'Sofia Pro', sans-serif;
+            font-weight: 300; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+        }
+        
+        .container {
+            max-width: 420px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.3); 
+            backdrop-filter: blur(2px); 
+            -webkit-backdrop-filter: blur(2px);
+            border-radius: 24px;
+            padding: 40px 32px;
+            text-align: center;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        
+        .title-img {
+            max-width: 85%; 
+            height: auto;
+            display: block;
+            margin: 0 auto 12px auto;
+        }
+        
+        .coming-soon {
+            font-size: 1.1rem;
+            color: #8c857b;
+            margin: 0 0 14px 0;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .player-wrapper {
+            background: rgba(255, 255, 255, 0.5); 
+            padding: 18px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+        
+        audio {
+            width: 100%;
+            display: block;
+        }
+
+        /* -----------------------------------------
+           ARTWORK DISPLAY & FADE ANIMATION
+           ----------------------------------------- */
+        .artwork-wrapper {
+            margin-bottom: 35px;
+            padding: 0 10px;
+            /* Runs the fade-in animation */
+            animation: fadeInArtwork 4.5s ease-out forwards;
+            opacity: 0; /* Starts invisible */
+        }
+
+        .artwork-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            display: block;
+            margin: 0 auto;
+        }
+
+        @keyframes fadeInArtwork {
+            from {
+                opacity: 0;
+                transform: translateY(4px); /* Subtle upward shift while fading */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Minimal Contact Area (No Border Line) */
+        .footer {
+            padding-top: 10px;
+        }
+
+        /* Sofia Pro Bold in All Caps for Artist Name */
+        .artist {
+            font-family: 'Sofia Pro', sans-serif;
+            font-weight: bold;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #8c857b;
+            margin: 0 0 14px 0;
+        }
+        
+        /* Sofia Pro Light for details (Custom Soft Beige #f2dfbb) */
+        .details {
+            font-family: 'Sofia Pro', sans-serif;
+            font-weight: 300;
+            font-size: 0.95rem;
+            color: #8c857b; 
+            line-height: 1.6;
+        }
+        
+        .details div {
+            margin: 6px 0;
+        }
+
+        /* Clickable links styling to match design */
+        .details a {
+            color: #8c857b;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .details a:hover {
+            color: #2c2a29;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Title Display Image -->
+    <img src="title.png" alt="Several Deaths" class="title-img">
+    
+    <!-- Website Placeholder Message -->
+    <div class="coming-soon">Website coming soon</div>
+
+    <!-- Audio Player -->
+    <div class="player-wrapper">
+        <audio controls controlsList="nodownload">
+            <source src="cwm_george_waters.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- Fading Artwork Showcase -->
+    <div class="artwork-wrapper">
+        <img src="artwork.png" alt="Featured Artwork" class="artwork-img">
+    </div>
+
+    <!-- Contact Info Area -->
+    <div class="footer">
+        <div class="artist">NJ</div>
+        <div class="details">
+            <div><a href="mailto:hello@njshealing.com">hello@njshealing.com</a></div>
+            <div><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">@njshealing</a></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
